@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class sorter {
 
@@ -21,6 +22,7 @@ public class sorter {
         return arr;
     }
 
+    // Source: https://www.geeksforgeeks.org/heaps-algorithm-for-generating-permutations/
     public static void algo(int n, int[] arr)
     {
         if (n == 1) {
@@ -51,11 +53,21 @@ public class sorter {
 
     public static void main(String[] args)
     {
-        ///////////////////////
-        // *** SET 'n' HERE ***
-        int n = 11;
-        ///////////////////////
-        ///////////////////////
+        // default n value
+        int n = 1;
+
+        // Scanner for user input
+        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+        System.out.println("Enter value of 'n'.");
+        String input = myObj.nextLine();
+
+        // Try to convert string to int. Handle error...
+        try { n = Integer.parseInt(input); }
+        catch (Exception ex)
+        {
+            System.out.println("You need to enter a number...");
+            return;
+        }
 
         // Start timing
         long startTime = System.currentTimeMillis();
@@ -88,5 +100,5 @@ public class sorter {
     // 9, 5688
     // 10, 40695
     // 11, 388463
-    //
+    // 12,
 }
