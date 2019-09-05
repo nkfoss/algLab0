@@ -30,7 +30,7 @@ public class sorter {
             System.out.println(Arrays.toString(arr)); }
         else
         {
-            // recursive call
+            // recursive call [outer]
             algo(n-1, arr);
 
             for (int i = 0; i < n-1; i ++)
@@ -45,7 +45,7 @@ public class sorter {
                     arr[n-1] = x;
                 }
 
-                // recursive call
+                // recursive call [inner]
                 algo(n-1, arr);
             }
         }
@@ -54,7 +54,7 @@ public class sorter {
     public static void main(String[] args)
     {
         // default n value
-        int n = 1;
+        int n = 3;
 
         // Scanner for user input
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
